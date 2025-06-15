@@ -11,7 +11,7 @@ requests>=2.31.0
 fake-useragent>=1.4.0
 
 # Résolution captcha (optionnel)
-capsolver-python>=1.11.0
+   capsolver-python==1.0
 
 # Parsing HTML
 lxml>=5.0.0
