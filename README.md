@@ -176,6 +176,16 @@ Pour des questions ou améliorations :
 - Tester avec `--headless` désactivé pour voir le navigateur
 - Utiliser un proxy si blocage IP
 
+## 🚀 Déploiement sur Railway
+
+1. Poussez ce dépôt sur GitHub (sans cookies ni secrets).
+2. Créez un projet sur [Railway](https://railway.app/) et connectez votre repo GitHub.
+3. Ajoutez les variables d'environnement nécessaires dans l'onglet 'Variables' de Railway (voir `env.example`).
+4. Déployez le projet (Railway détecte automatiquement Python via `requirements.txt` ou le `Dockerfile`).
+5. (Optionnel) Ajoutez une base de données via l'interface Railway si besoin.
+
+**Attention :** Ne poussez jamais de cookies ou de secrets dans le dépôt public !
+
 ---
 
 **🚀 Prêt à scraper ? Lancez : `python scraper_leboncoin_simple.py --ville "VotreVille"`** 
