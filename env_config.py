@@ -1,0 +1,3 @@
+# Configuration Supabase
+SUPABASE_URL = "https://wymemydpmyjfwebjfril.supabase.co"
+SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Ind5bWVteWRwbXlqZndlYmpmcmlsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDk5Mjc5MzQsImV4cCI6MjA2NTUwMzkzNH0.cwagjqw8cz9xwl15_hBrb2TBH5f1ucZQWCKzVn1feDI" 

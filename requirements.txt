@@ -1,0 +1,23 @@
+# Dépendances essentielles pour le scraper LeBonCoin simple
+# Installation: pip install -r requirements.txt
+
+# Scraping et automation web
+undetected-chromedriver>=3.5.5
+selenium>=4.16.0
+beautifulsoup4>=4.12.2
+requests>=2.31.0
+
+# User-Agent aléatoire
+fake-useragent>=1.4.0
+
+# Résolution captcha (optionnel)
+capsolver-python>=1.11.0
+
+# Parsing HTML
+lxml>=5.0.0
+
+# Base de données Supabase
+supabase>=2.3.0
+
+# Serveur web pour Railway (optionnel)
+flask>=3.0.0 
