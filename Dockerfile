@@ -20,5 +20,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 # 3. Code
 COPY . .
 
-# 4. Démarrage : garde le conteneur vivant
-CMD ["python", "-m", "flask", "run", "--host=0.0.0.0", "--port", "3000"]
+# 4. Flask : déclare l’appli et écoute le port Railway
+ENV FLASK_APP=app.py          # ← ton mini-serveur ajouté
+ENV PORT=3000                 # Railway l’écrase au déploiement, mais ça fixe le local
+
+# 5. Démarrage
+CMD ["flask", "run", "--host=0.0.0.0", "--port", "3000"]
