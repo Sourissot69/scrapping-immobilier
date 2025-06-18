@@ -1,5 +1,24 @@
-FROM python:3.11-slim
+FROM python:3.11-slim-bullseye
+
+# 1. Dépendances système
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+        chromium-driver \
+        chromium \
+        wget unzip \
+        libnss3 libatk-bridge2.0-0 libgtk-3-0 fonts-liberation \
+    && rm -rf /var/lib/apt/lists/*
+
+ENV CHROME_BINARY=/usr/bin/chromium
+ENV CHROMEDRIVER_PATH=/usr/bin/chromedriver
+
+# 2. Python
 WORKDIR /app
-COPY . .
+COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
-CMD ["python", "scraper_leboncoin_visible.py"] 
+
+# 3. Code
+COPY . .
+
+# 4. Démarrage : garde le conteneur vivant
+CMD ["python", "-m", "flask", "run", "--host=0.0.0.0", "--port", "3000"]
